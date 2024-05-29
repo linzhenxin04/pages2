@@ -1,0 +1,121 @@
+body {
+    font-family: 'Heiti SC', '黑体', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(images/background.jpg)no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+}
+
+.left-side, .right-side {
+    padding: 20px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-side {
+    color: #ffffff;
+}
+
+.right-side {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid white;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.icon {
+    position: relative;
+}
+
+.icon img {
+    width: 50px; /* 根据需要调整图标大小 */
+    height: 50px; /* 根据需要调整图标大小 */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icon img:hover {
+    transform: scale(1.2);
+    filter: brightness(0) invert(41%) sepia(72%) saturate(3653%) hue-rotate(297deg) brightness(98%) contrast(97%); /* 悬停时颜色变化效果 */
+}
+
+.widget {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.widget a {
+    color: white; /* 默认文字颜色为白色 */
+    text-decoration: none; /* 移除默认下划线 */
+    transition: color 0.3s ease; /* 添加平滑过渡效果 */
+}
+
+.widget a:hover {
+    color: #ff69b4; /* 悬停时文字颜色变为粉色 */
+}
+
+.widget-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.right-side::before {
+    content: "";
+    position: absolute;
+    background: url('/mnt/data/小猫背景.png') no-repeat center center;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    top: 10px;
+    right: 10px;
+    opacity: 0.5;
+}
